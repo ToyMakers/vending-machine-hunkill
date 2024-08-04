@@ -1,20 +1,23 @@
-import { useState } from 'react';
+import useStore from '../stores/store';
+
+type StoreType = {
+  increaseTotal: (coin: number) => void;
+  total: number;
+};
 
 const Inputs = () => {
-  const [inputCoin, setInputCoin] = useState(0);
-  const [total, setTotal] = useState(0);
+  const { increaseTotal, total } = useStore() as StoreType;
 
   const insert = (coin: number) => {
-    setTotal(total + coin);
-
-    return 1;
+    increaseTotal(coin);
+    console.log(total);
   };
   return (
     <div>
+      <button onClick={() => insert(50)}>50</button>
       <button onClick={() => insert(100)}>100</button>
-      <button>500</button>
-      <button>1000</button>
-      <button>10000</button>
+      <button onClick={() => insert(500)}>500</button>
+      <button onClick={() => insert(1000)}>1000</button>
     </div>
   );
 };
