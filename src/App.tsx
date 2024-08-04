@@ -1,7 +1,14 @@
 import { useState } from 'react';
 import style from './styles/vendor.module.css';
+import Inputs from './components/Inputs';
+import useStore from './stores/store';
 
-function App() {
+type StoreType = {
+  total: number;
+};
+
+const App = () => {
+  const { total } = useStore() as StoreType;
   return (
     <div className={style.Main}>
       <div className={style.layout}>
@@ -19,12 +26,15 @@ function App() {
 
           <div>
             <text> output</text>
-            <div className={style.output}></div>
+            <div className={style.output}>
+              <Inputs />
+              <text>{total}</text>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
