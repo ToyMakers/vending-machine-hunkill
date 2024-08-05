@@ -2,33 +2,48 @@ import { useState } from 'react';
 import style from './styles/vendor.module.css';
 import Inputs from './components/Inputs';
 import useStore from './stores/store';
+import Outputs from './components/Outputs';
+import VendorDisplay from './components/VendorDisplay';
+import { drinks } from './components/types/type';
 
 type StoreType = {
   total: number;
+  infos: drinks[];
 };
 
 const App = () => {
-  const { total } = useStore() as StoreType;
+  const { total, infos } = useStore() as StoreType;
   return (
     <div className={style.Main}>
       <div className={style.layout}>
         <div className={style.vendor}>
           <div className={style.venor_layout}>
             <div className={style.vendor_displays}>
+              <VendorDisplay />
               <div className={style.vendor_displays_can}></div>
               <div className={style.vendor_displays_price}></div>
             </div>
           </div>
         </div>
         <div className={style.interact}>
-          <text> input</text>
-          <div className={style.input}></div>
-
+          <span> input</span>
+          <div className={style.input}>
+            <Inputs />
+            <span>{total}</span>
+          </div>
           <div>
-            <text> output</text>
+            <span> output</span>
             <div className={style.output}>
-              <Inputs />
-              <text>{total}</text>
+              <Outputs />
+              <ul>
+                {infos.map((info, index) => (
+                  <li key={index}>
+                    Name: {info.name}, Count: {info.count}, Cost: {info.cost},
+                    Afford: {info.afford.toString()}
+                  </li>
+                ))}
+              </ul>
+              <span>qwer{total}</span>
             </div>
           </div>
         </div>
