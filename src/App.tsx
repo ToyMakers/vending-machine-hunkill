@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import style from './styles/vendor.module.css';
 import Inputs from './components/Inputs';
 import useStore from './stores/store';
@@ -37,7 +36,7 @@ const App = () => {
               <Outputs />
               <ul>
                 {infos.map((info, index) => (
-                  <li key={index}>
+                  <li key={index} className={style[`drink_${info.name}`]}>
                     Name: {info.name}, Count: {info.count}, Cost: {info.cost},
                     Afford: {info.afford.toString()}
                   </li>

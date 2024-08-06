@@ -1,65 +1,67 @@
-
-body{
-  margin:0;
+body {
+  margin: 0;
 }
-.Main{
+.Main {
   width: 100vw;
   height: 100vh;
 }
-.layout{
+.layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;  
+  grid-template-columns: 1fr 1fr;
 }
-.interact{
+.interact {
   display: grid;
   grid-template-rows: auto auto;
 }
-.vendor{
+.vendor {
   width: 500px;
   height: 600px;
-  margin : 20px;
+  margin: 20px;
   background-color: rgb(46, 0, 144);
 }
 
-.input{
+.input {
   width: 200px;
   height: 200px;
   background-color: rgb(140, 93, 0);
 }
 
-.output{
+.output {
   width: 200px;
   height: 200px;
   background-color: rgb(5, 159, 0);
 }
 
-.vendor_layout{
-
+.vendor_layout {
 }
 
-.vendor_displays{
-
+.vendor_displays {
 }
 
-.vendor_displays_can{
-
+.vendor_displays_can {
 }
 
-.vendor_displays_price{
-  
+.vendor_displays_price {
 }
 
-.vendor_can{
-
+.vendor_can {
 }
 
-.vendor_button{
-
+.vendor_button {
 }
 
-.vendor_price{
-
+.vendor_price {
 }
-.vendor_insert{
+.vendor_insert {
+}
 
+.drink_A {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(17, 199, 0);
+}
+.drink_B {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(234, 184, 49);
 }

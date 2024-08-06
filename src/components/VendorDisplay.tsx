@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import useStore from '../stores/store';
 import { drinks } from './types/type';
 import vendorDrinks from '../assets/VendorDrinks.json';
@@ -38,7 +37,11 @@ const Inputs = () => {
   return (
     <div>
       {vendorDrinks.map((button: VendorDrinks, index: number) => (
-        <button key={index} onClick={() => deposit(button.value, button.label)}>
+        <button
+          key={index}
+          onClick={() => deposit(button.value, String.fromCharCode(65 + index))}
+        >
+          <div className="drinks"></div>
           {button.label}
         </button>
       ))}
