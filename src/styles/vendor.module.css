@@ -55,6 +55,12 @@ body {
 .vendor_insert {
 }
 
+.button {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(3, 174, 213);
+}
+
 .drink_A {
   width: 100px;
   height: 100px;
@@ -64,4 +70,44 @@ body {
   width: 100px;
   height: 100px;
   background-color: rgb(234, 184, 49);
+}
+.drink_C {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(234, 148, 49);
+}
+.drink_D {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(49, 179, 234);
+}
+.drink_E {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(49, 117, 234);
+}
+.drink_F {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(123, 49, 234);
+}
+.drink_G {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(231, 49, 234);
+}
+.drink_H {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(234, 49, 166);
+}
+.drink_I {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(234, 49, 55);
+}
+.drink_J {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(125, 124, 128);
 }

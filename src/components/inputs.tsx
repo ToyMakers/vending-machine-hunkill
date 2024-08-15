@@ -1,5 +1,5 @@
 import useStore from '../stores/store';
-
+import style from '../styles/vendor.module.css';
 type StoreType = {
   increaseTotal: (coin: number) => void;
   total: number;
@@ -14,10 +14,18 @@ const Inputs = () => {
   };
   return (
     <div>
-      <button onClick={() => insert(50)}>50</button>
-      <button onClick={() => insert(100)}>100</button>
-      <button onClick={() => insert(500)}>500</button>
-      <button onClick={() => insert(1000)}>1000</button>
+      <button className={style.button} onClick={() => insert(50)}>
+        50
+      </button>
+      <button className={style.button} onClick={() => insert(100)}>
+        100
+      </button>
+      <button className={style.button} onClick={() => insert(500)}>
+        500
+      </button>
+      <button className={style.button} onClick={() => insert(1000)}>
+        1000
+      </button>
     </div>
   );
 };
