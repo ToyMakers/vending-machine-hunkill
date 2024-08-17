@@ -2,11 +2,13 @@ import useStore from '../stores/store';
 import { drinks } from './types/type';
 import vendorDrinks from '../assets/VendorDrinks.json';
 type StoreType = {
-  decreaseTotal: (coin: number) => void;
+  outputVendor: (coin: number) => void;
   clearInfo: () => void;
   clearTotal: () => void;
   addInfo: (drink: drinks) => void;
-  total: number;
+  inputVendor: (coin: number) => void;
+  inputs: number;
+  returns: number;
   infos: drinks[];
 };
 
@@ -16,10 +18,12 @@ type VendorDrinks = {
 };
 
 const Inputs = () => {
-  const { decreaseTotal, addInfo, total } = useStore() as StoreType;
+  const { inputVendor, outputVendor, addInfo, inputs, returns } =
+    useStore() as StoreType;
 
+  // 음료수 나오는 출구
   const deposit = (coin: number, name: string) => {
-    if (total - coin < 0) {
+    if (inputs - coin < 0) {
       return alert('금액이 적습니다!');
     }
 
@@ -30,10 +34,11 @@ const Inputs = () => {
       afford: true,
     };
 
-    decreaseTotal(coin);
+    outputVendor(coin);
     addInfo(drinkInfo);
-    console.log(total);
+    console.log(inputs, returns);
   };
+
   return (
     <div>
       {vendorDrinks.map((button: VendorDrinks, index: number) => (
@@ -45,6 +50,11 @@ const Inputs = () => {
           {button.label}
         </button>
       ))}
+
+      <button onClick={() => inputVendor(50)}> 50 </button>
+      <button onClick={() => inputVendor(100)}> 100 </button>
+      <button onClick={() => inputVendor(1000)}> 1000 </button>
+      <button onClick={() => inputVendor(5000)}> 5000 </button>
     </div>
   );
 };

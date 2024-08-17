@@ -70,6 +70,11 @@ const useStore = create((set) => ({
         };
       }
     }),
+  returnTotal22: (cost: number) =>
+    set((state: { total: number; returns: number }) => ({
+      total: state.total + cost,
+      returns: state.returns - cost,
+    })),
 }));
 
 export default useStore;
