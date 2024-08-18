@@ -15,9 +15,69 @@ body {
   margin: 0;
   background-color: rgb(212, 159, 51);
 }
+button {
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgb(62, 62, 62);
+  margin: 5px;
+  border: none;
+}
+
+.inputHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 수직 정렬 */
+  justify-content: right; /* 가로 중앙 정렬 */
+  flex-wrap: wrap; /* 내용이 부모 요소의 너비를 초과할 경우 자동으로 줄 바꿈 */
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.coin {
+  width: 40px;
+  height: 40px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.bill {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coin:focus {
+  outline: none;
+}
+.drinkContent {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drinkHeader {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.drinkCan {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+.textMessage {
+  margin: 10px;
+}
 .vendor {
-  width: 500px;
-  height: 600px;
+  width: 800px;
+  height: 700px;
   margin: 20px;
   background-color: rgb(155, 112, 248);
 }
@@ -44,9 +104,6 @@ body {
 }
 
 .vendor_displays_price {
-}
-
-.vendor_can {
 }
 
 .vendor_button {

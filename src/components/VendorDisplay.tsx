@@ -59,30 +59,42 @@ const Vendors = () => {
   };
 
   return (
-    <div>
-      <div>
-        <p>select drinks</p>
-        {vendorDrinks.map((button: VendorDrinks, index: number) => (
-          <button
-            key={index}
-            onClick={() =>
-              deposit(button.value, String.fromCharCode(65 + index))
-            }
-          >
-            <div className="drinks"></div>
-            {button.label}
-          </button>
-        ))}
+    <div className={style.vendor}>
+      <div className={style.drinkHeader}>
+        {vendorDrinks.map((button: VendorDrinks, index: number) => {
+          const whatDrinkCan = `drink_${String.fromCharCode(65 + index)}`;
+          return (
+            <div className={style.drinkContent}>
+              <div className={style[whatDrinkCan]}></div>
+              <button
+                key={index}
+                onClick={() =>
+                  deposit(button.value, String.fromCharCode(65 + index))
+                }
+              >
+                <div className="drinks"></div>
+                {button.label}
+              </button>
+            </div>
+          );
+        })}
       </div>
-      <div>
-        <p>input coins</p>
-        <button onClick={() => handleInputVendor(50)}> 50 </button>
-        <button onClick={() => handleInputVendor(100)}> 100 </button>
-        <button onClick={() => handleInputVendor(1000)}> 1000 </button>
-        <button onClick={() => handleInputVendor(5000)}> 5000 </button>
-        <p>{inputs}</p>
+      <p>input coins</p>
+      <div className={style.inputHeader}>
+        <button className={style.coin} onClick={() => handleInputVendor(50)}>
+          50
+        </button>
+        <button className={style.coin} onClick={() => handleInputVendor(100)}>
+          100
+        </button>
+        <button className={style.bill} onClick={() => handleInputVendor(1000)}>
+          1000
+        </button>
+        <button className={style.bill} onClick={() => handleInputVendor(5000)}>
+          5000
+        </button>
       </div>
-
+      <p>{inputs}</p>
       <div>
         <p> click when returns</p>
         <button onClick={() => returnsVendor(inputs)}> return</button>

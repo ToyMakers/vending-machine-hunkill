@@ -15,12 +15,12 @@ const App = () => {
   return (
     <div className={style.Main}>
       <div className={style.layout}>
-        <div className={style.vendor}>
+        <div>
           <div className={style.venor_layout}>
             <div className={style.vendor_displays}>
+              <div className={style.textMessage}>select drinks</div>
               <VendorDisplay />
               <div className={style.vendor_displays_can}></div>
-
               <div className={style.vendor_displays_price}></div>
             </div>
           </div>
