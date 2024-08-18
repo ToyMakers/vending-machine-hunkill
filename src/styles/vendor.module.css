@@ -10,14 +10,16 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .interact {
-  display: grid;
-  grid-template-rows: auto auto;
+}
+.inputName {
+  margin: 0;
+  background-color: rgb(212, 159, 51);
 }
 .vendor {
   width: 500px;
   height: 600px;
   margin: 20px;
-  background-color: rgb(46, 0, 144);
+  background-color: rgb(155, 112, 248);
 }
 
 .input {

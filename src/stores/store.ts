@@ -26,13 +26,16 @@ const useStore = create((set) => ({
 
   // 지갑 돈 복사
   increaseTotal: (cost: number) =>
-    set((state: { inputs: number }) => ({ inputs: state.inputs + cost })),
+    set((state: { total: number }) => ({ total: state.total + cost })),
   // 지갑 -> 벤더 투입 하였으니 지갑에 있는 돈 감소
   decreaseTotal: (cost: number) =>
     set((state: { total: number }) => ({ total: state.total - cost })),
   // 벤더에 들어간 돈
   inputVendor: (cost: number) =>
-    set((state: { inputs: number }) => ({ inputs: state.inputs + cost })),
+    set((state: { inputs: number; total: number }) => ({
+      inputs: state.inputs + cost,
+      total: state.total - cost,
+    })),
   // 음료수를 구입 했으니 벤더 들어간 돈 감소
   outputVendor: (cost: number) =>
     set((state: { inputs: number }) => ({ inputs: state.inputs - cost })),

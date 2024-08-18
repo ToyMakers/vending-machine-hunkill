@@ -20,13 +20,15 @@ const App = () => {
             <div className={style.vendor_displays}>
               <VendorDisplay />
               <div className={style.vendor_displays_can}></div>
+
               <div className={style.vendor_displays_price}></div>
             </div>
           </div>
         </div>
         <div className={style.interact}>
-          <span> input</span>
           <div className={style.input}>
+            <span className={style.inputName}> My Wallet</span>
+
             <Inputs />
             <span>{total}</span>
           </div>
@@ -42,7 +44,6 @@ const App = () => {
                   </li>
                 ))}
               </ul>
-              <span>qwer{total}</span>
             </div>
           </div>
         </div>
