@@ -15,16 +15,6 @@ body {
   margin: 0;
   background-color: rgb(212, 159, 51);
 }
-button {
-  cursor: pointer;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: rgb(62, 62, 62);
-  margin: 5px;
-  border: none;
-}
 
 .inputHeader {
   display: flex;
@@ -33,31 +23,49 @@ button {
   justify-content: right; /* 가로 중앙 정렬 */
   flex-wrap: wrap; /* 내용이 부모 요소의 너비를 초과할 경우 자동으로 줄 바꿈 */
   gap: 10px;
-  margin-right: 10px;
+  margin: 10px;
+  background-color: rgb(176, 145, 243);
 }
 
 .coin {
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgb(62, 62, 62);
+  margin: 5px;
+  border: none;
   width: 40px;
   height: 40px;
   background-color: #d4af37;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 5px;
 }
 .bill {
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgb(62, 62, 62);
+  margin: 5px;
+  border: none;
   width: 60px;
   height: 30px;
   border-radius: 5px;
   background-color: #4caf50;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  margin: 5px;
 }
 .coin:focus {
   outline: none;
 }
 .drinkContent {
-  margin: 10px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +82,10 @@ button {
 }
 .textMessage {
   margin: 10px;
+}
+.vendorMessage {
+  padding: 10px;
+  background-color: rgb(194, 172, 243);
 }
 .vendor {
   width: 800px;
@@ -114,6 +126,43 @@ button {
 .vendor_insert {
 }
 
+.can {
+  width: 60px;
+  height: 120px;
+  position: relative;
+}
+
+/* 캔의 윗부분 */
+.canTop {
+  width: 100%;
+  height: 20px;
+  background-color: #d1d1d1; /* 윗부분 색상 */
+  border-top-left-radius: 30px; /* 윗부분을 둥글게 */
+  border-top-right-radius: 30px; /* 윗부분을 둥글게 */
+}
+
+/* 캔의 몸통 */
+.canBody {
+  width: 100%;
+  height: 80px;
+  background-color: #ff4500; /* 캔의 메인 색상 */
+}
+
+/* 캔의 아랫부분 */
+.canBottom {
+  width: 100%;
+  height: 20px;
+  background-color: #d1d1d1; /* 아랫부분 색상 */
+}
+
+.buttonVendor {
+  margin-top: 30px;
+  width: 60px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(52, 143, 255);
+}
+
 .button {
   width: 60px;
   height: 30px;
@@ -121,52 +170,52 @@ button {
 }
 
 .drink_A {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(17, 199, 0);
 }
 .drink_B {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(234, 184, 49);
 }
 .drink_C {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(234, 148, 49);
 }
 .drink_D {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(49, 179, 234);
 }
 .drink_E {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(49, 117, 234);
 }
 .drink_F {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(123, 49, 234);
 }
 .drink_G {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(231, 49, 234);
 }
 .drink_H {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(234, 49, 166);
 }
 .drink_I {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(234, 49, 55);
 }
 .drink_J {
-  width: 100px;
+  width: 60px;
   height: 100px;
   background-color: rgb(125, 124, 128);
 }
